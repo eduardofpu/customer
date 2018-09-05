@@ -1,6 +1,5 @@
 package br.com.zup.customer.controller;
 
-import br.com.zup.customer.domain.Customer;
 import br.com.zup.customer.representation.CustomerId;
 import br.com.zup.customer.representation.CustomerRepresentation;
 import br.com.zup.customer.representation.CustomerResponse;
@@ -11,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CustomerController {
+
+    //https://customers-challenge.herokuapp.com/
 
     /*{"name":"Jackson","city":{"id":5}}*/
 
