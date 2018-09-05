@@ -160,15 +160,12 @@ O Postman pode ser recomendado:
 ```sh
 $ curl -H "Content-Type: application/json" -X POST -d '
 
-https://customers-challenge.herokuapp.com/customers/post
+https://customers-challenge.herokuapp.com/customers
 
 {
-	"name":"Adriana",
-	"city":{
-		"id":1
-		
-	}
-		
+	"name":"Jose",
+    "city":"https://customers-challenge.herokuapp.com/cities/1"
+    	
 }
 
 ```
@@ -179,16 +176,11 @@ O Postman pode ser recomendado:
 ```sh
 $ curl -H "Content-Type: application/json" -X POST -d '
 
-https://customers-challenge.herokuapp.com/customers/put
+https://customers-challenge.herokuapp.com/customers
 
 {
-	"id":1,
-	"name":"Juliano",
-		"city":{
-		"id":1
-		
-	}
-	
+    "name": "Noe",
+    "city": "https://customers-challenge.herokuapp.com/cities/1"
 }
 
 ```
