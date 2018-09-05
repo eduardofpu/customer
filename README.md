@@ -8,7 +8,7 @@ https://customers-challenge.herokuapp.com
 
 e teste as rotas descritas abaixo...
 
-out rode o projeto utilizando o postgres ou o H2 na porta localhot:8080
+caso deseje baixe o projeto para executar com  o postgres ou o H2 na porta localhot:8080
 ```
  
 ## 1. Dependências
