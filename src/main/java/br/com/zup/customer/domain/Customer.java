@@ -23,7 +23,8 @@ public class Customer implements Serializable{
     @Column
     private String name;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
+    @JoinColumn(name="city")
     private City city;
 
 }
