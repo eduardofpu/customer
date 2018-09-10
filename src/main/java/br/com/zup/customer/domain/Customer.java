@@ -1,32 +1,29 @@
 package br.com.zup.customer.domain;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@JsonSerialize
-@JsonDeserialize
-public class Customer {
+public class Customer implements Serializable{
+
+    private static final long serialVersionUID = -3323341835524456015L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name="city")
-    @NaturalId
+    @ManyToOne(optional = false)
     private City city;
-
 
 }

@@ -1,23 +1,24 @@
 package br.com.zup.customer.domain;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @Entity
-@Cacheable
-@EqualsAndHashCode
-public class City {
+public class City implements Serializable {
+
+    private static final long serialVersionUID = -5848155846308720315L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column
     private String name;
-
-
 }
