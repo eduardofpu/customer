@@ -10,4 +10,5 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "cities", path = "cities")
 public interface CityRepository extends JpaRepository<City, Long> {
     List<City> findByNameIgnoreCaseContaining(@Param("name") String name);
+    List<City> findAllByOrderByNameAsc();
 }

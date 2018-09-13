@@ -11,4 +11,5 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "customers", path = "customers")
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
     List<Customer> findByNameIgnoreCaseContaining(@Param("name") String name);
+    List<Customer> findAllByOrderByNameAsc();
 }
